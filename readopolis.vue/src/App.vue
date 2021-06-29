@@ -11,7 +11,7 @@
       </div>
       <div class="navbar-menu" id="navbar-menu" v-bind:class="{'is-active': showMobileMenu }">
         <div class="navbar-end">
-          <router-link to="/sale" class="navbar-item">Buy</router-link>
+          <router-link to="/buy" class="navbar-item">Buy</router-link>
           <router-link to="/rent" class="navbar-item">Rent</router-link>
 
           <div class="navbar-item">
