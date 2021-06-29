@@ -52,7 +52,7 @@ export default {
   },
   mounted() {
     this.getLatestProducts()
-    // document.title = 'Home | Djackets'
+    document.title = 'Home | Readopolis'
   },
   methods: {
     async getLatestProducts(){
