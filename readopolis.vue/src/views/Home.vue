@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <section class="hero is-medium is-dark mb-6">
+    <section class="hero is-small is-black mb-6">
         <div class="hero-body has-text-centered">
             <p class="title mb-6">
                 Welcome to Readopolis
@@ -12,7 +12,7 @@
     </section>
     <div class="columns is-multiline">
       <div class="column is-12">
-          <h2 class="is-size-2 has-text-centered">Latest Books</h2>
+          <h2 class="is-size-2 has-text-black has-text-centered">Latest Books</h2>
       </div>
 
       <ProductBox 
@@ -62,3 +62,9 @@ export default {
   }
 }
 </script>
+<style>
+body {
+background: rgb(163,247,247);
+background: linear-gradient(90deg, rgba(163,247,247,1) 0%, rgba(167,248,248,1) 32%, rgba(255,253,134,1) 100%);
+}
+</style>

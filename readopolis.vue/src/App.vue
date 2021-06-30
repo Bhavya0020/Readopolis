@@ -1,6 +1,6 @@
 <template>
   <div id="wrapper">
-    <nav class="navbar is-dark">
+    <nav class="navbar is-black">
       <div class="navbar-brand">
         <router-link to="/" class="navbar-item"><strong>Readopolis</strong></router-link>
         <a class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu" @click="showMobileMenu = !showMobileMenu">
