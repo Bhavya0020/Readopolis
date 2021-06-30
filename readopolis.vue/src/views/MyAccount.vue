@@ -11,25 +11,25 @@
 
             <hr>
 
-            <!-- <div class="column is-12">
+            <div class="column is-12">
                 <h2 class="subtitle">My orders</h2>
 
                 <OrderSummary
                     v-for="order in orders"
                     v-bind:key="order.id"
                     v-bind:order="order" />
-            </div> -->
+            </div>
         </div>
     </div>
 </template>
 
 <script>
 import axios from 'axios'
-// import OrderSummary from '@/components/OrderSummary.vue'
+import OrderSummary from '@/components/OrderSummary.vue'
 export default {
     name: 'MyAccount',
     components: {
-        // OrderSummary
+        OrderSummary
     },
     data() {
         return {
