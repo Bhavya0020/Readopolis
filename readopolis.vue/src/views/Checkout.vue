@@ -22,9 +22,9 @@
                             v-bind:key="item.product.id"
                         >
                             <td>{{ item.product.name }}</td>
-                            <td>${{ item.product.price }}</td>
+                            <td>₹{{ item.product.price }}</td>
                             <td>{{ item.quantity }}</td>
-                            <td>${{ getItemTotal(item).toFixed(2) }}</td>
+                            <td>₹{{ getItemTotal(item).toFixed(2) }}</td>
                         </tr>
                     </tbody>
 
@@ -32,7 +32,7 @@
                         <tr>
                             <td colspan="2">Total</td>
                             <td>{{ cartTotalLength }}</td>
-                            <td>${{ cartTotalPrice.toFixed(2) }}</td>
+                            <td>₹{{ cartTotalPrice.toFixed(2) }}</td>
                         </tr>
                     </tfoot>
                 </table>
@@ -140,12 +140,12 @@ export default {
     mounted() {
         document.title = 'Checkout | Readopolis'
         this.cart = this.$store.state.cart
-        // if (this.cartTotalLength > 0) {
-        //     this.stripe = Stripe('pk_test_51H1HiuKBJV2qfWbD2gQe6aqanfw6Eyul5PO2KeOuSRlUMuaV4TxEtaQyzr9DbLITSZweL7XjK3p74swcGYrE2qEX00Hz7GmhMI')
-        //     const elements = this.stripe.elements();
-        //     this.card = elements.create('card', { hidePostalCode: true })
-        //     this.card.mount('#card-element')
-        // }
+        if (this.cartTotalLength > 0) {
+            this.stripe = Stripe('pk_test_51J7uhpSAqDDpW7pDQQMIaiyDY2LWphLaVJuOtuPPqyvdAVb3Msh0Cth37KfWJcHwHJ3yFB2x4orUqHwIX34d8hnE006c7u8eS1')
+            const elements = this.stripe.elements();
+            this.card = elements.create('card', { hidePostalCode: true })
+            this.card.mount('#card-element')
+        }
     },
     methods: {
         getItemTotal(item) {
